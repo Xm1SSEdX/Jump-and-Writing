@@ -16,10 +16,10 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies
-        run: python -m pip install -r requirements.txt
+        run: python -m pip install -r ArtiixsBounce_Windows/requirements.txt
 
       - name: Build EXE
-        run: python -m PyInstaller --noconfirm --clean --onefile --windowed --name ArtiixsBounce win_main.py
+        run: python -m PyInstaller --noconfirm --clean --onefile --noconsole ArtiixsBounce_Windows/win_main.py
 
       - name: Upload EXE
         uses: actions/upload-artifact@v4
